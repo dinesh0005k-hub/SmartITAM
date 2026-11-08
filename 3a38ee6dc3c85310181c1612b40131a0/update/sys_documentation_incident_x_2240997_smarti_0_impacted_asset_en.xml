@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_2240997_smarti_0_impacted_asset" label="Impacted Asset" language="en" table="incident">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_2240997_smarti_0_impacted_asset</element>
+            <help/>
+            <hint/>
+            <label>Impacted Asset</label>
+            <language>en</language>
+            <name>incident</name>
+            <plural>Impacted Assets</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-10-20 17:12:52</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Impacted Asset</sys_name>
+            <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+            <sys_update_name>sys_documentation_incident_x_2240997_smarti_0_impacted_asset_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-10-20 17:12:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

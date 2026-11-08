@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="SmartITAM">2f2b0b8ec3141b10181c1612b401319a</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>DIRECT</link_type>
+        <map_page/>
+        <mobile_title>Operations Dashboard</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name/>
+        <order>100</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>https://dev415535.service-now.com/now/platform-analytics-workspace/dashboards/params/edit/false/sys-id/40b7be0ec3501b10181c1612b4013181/__state__/b64~eyI5MjNhOTEzYjUzMmMwMTEwYWFiOWRkZWVmZjdiMTI0MyI6eyJsaXN0X2NvbnRyb2xsZXJfMyI6eyJfIjp7InF1ZXJ5Ijoic3RhdHVzPXJldGlyZWReT1Jjb25kaXRpb249ZGFtYWdlZCJ9fX19</query>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <route/>
+        <screen/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-03 15:41:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b999878ac3141b10181c1612b401312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Operations Dashboard</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+        <sys_update_name>sys_app_module_b999878ac3141b10181c1612b401312f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-03 15:41:02</sys_updated_on>
+        <timeline_page/>
+        <title>Operations Dashboard</title>
+        <uncancelable>false</uncancelable>
+        <ux_list/>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

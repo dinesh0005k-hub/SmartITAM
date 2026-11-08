@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="5059e221c30c5310181c1612b4013160" label="IT Asset" max_length="40" name="x_2240997_smarti_0_it_asset" type="collection">
+        <element label="Serial Number" max_length="40" name="serial_number" type="string"/>
+        <element label="Acquired Date" max_length="40" name="acquired_date" type="glide_date"/>
+        <element label="Device Type" max_length="40" name="device_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monitor" sequence="1" value="monitor"/>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="laptop"/>
+                <element inactive_on_update="false" label="Smartphone" sequence="2" value="smartphone"/>
+            </choice>
+        </element>
+        <element label="Model" max_length="40" name="model" type="string"/>
+        <element display="true" label="Asset Tag" max_length="40" name="asset_tag" type="string"/>
+        <element label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Retired" sequence="2" value="retired"/>
+                <element inactive_on_update="false" label="In Stock" sequence="0" value="in_stock"/>
+                <element inactive_on_update="false" label="Assigned" sequence="1" value="assigned"/>
+            </choice>
+        </element>
+        <element label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Condition" max_length="40" name="condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Brand New" sequence="1" value="brand_new"/>
+                <element inactive_on_update="false" label="Refurbished" sequence="0" value="refurbished"/>
+                <element inactive_on_update="false" label="Damaged" sequence="2" value="damaged"/>
+            </choice>
+        </element>
+        <element label="Retired Date" max_length="40" name="retired_date" type="glide_date"/>
+        <index name="index">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

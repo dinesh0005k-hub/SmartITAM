@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Device Condition">fc8a0f55c3149310181c1612b4013199</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-11-01 07:48:27</sys_created_on>
+        <sys_id>d24d83d9c3149310181c1612b401316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Refurbished</sys_name>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+        <sys_update_name>question_choice_d24d83d9c3149310181c1612b401316d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-11-01 07:48:27</sys_updated_on>
+        <text>Refurbished</text>
+        <value>refurbished</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=d24d83d9c3149310181c1612b401316d"/>
+</record_update>

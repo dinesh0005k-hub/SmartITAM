@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_2240997_smarti_0.AssetInventoryUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>AssetInventoryUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var AssetInventoryUtils = Class.create();
+AssetInventoryUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    /**
+     * Checks if a refurbished asset is in stock for the requested device type.
+     * Can be called via GlideAjax from the portal or directly from server scripts.
+     */
+    checkStockAvailability: function(deviceType) {
+        if (!deviceType) {
+            deviceType = this.getParameter('sysparm_device_type');
+        }
+
+        var result = {
+            available: false,
+            assetSysId: '',
+            assetTag: ''
+        };
+
+        if (!deviceType) {
+            return JSON.stringify(result);
+        }
+
+        var assetGr = new GlideRecord('x_2240997_smarti_0_it_asset');
+        assetGr.addQuery('device_type', deviceType);
+        assetGr.addQuery('status', 'in_stock');
+        assetGr.addQuery('condition', 'refurbished');
+        assetGr.setLimit(1);
+        assetGr.query();
+
+        if (assetGr.next()) {
+            result.available = true;
+            result.assetSysId = assetGr.getUniqueValue();
+            result.assetTag = assetGr.getValue('asset_tag');
+        }
+
+        return JSON.stringify(result);
+    },
+
+    /**
+     * Assigns the identified refurbished asset to the requester.
+     * Called during zero-touch fulfillment in Flow Designer.
+     */
+    assignRefurbishedAsset: function(assetSysId, userSysId, requestSysId) {
+        if (!assetSysId || !userSysId) {
+            return false;
+        }
+
+        var assetGr = new GlideRecord('x_2240997_smarti_0_it_asset');
+        if (assetGr.get(assetSysId)) {
+            assetGr.setValue('status', 'assigned');
+            assetGr.setValue('assigned_to', userSysId);
+            assetGr.update();
+
+            // Link asset back to Hardware Request record
+            var reqGr = new GlideRecord('x_2240997_smarti_0_hardware_request');
+            if (reqGr.get(requestSysId)) {
+                reqGr.setValue('linked_asset', assetSysId);
+                reqGr.setValue('fulfillment_mode', 'refurbished_allocation');
+                reqGr.setValue('state', 3); // 3 = Closed Complete
+                reqGr.update();
+            }
+            return true;
+        }
+        return false;
+    },
+
+    type: 'AssetInventoryUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-21 06:12:19</sys_created_on>
+        <sys_id>523a4635c3c4d310181c1612b4013199</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AssetInventoryUtils</sys_name>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+        <sys_update_name>sys_script_include_523a4635c3c4d310181c1612b4013199</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-21 06:12:19</sys_updated_on>
+    </sys_script_include>
+</record_update>

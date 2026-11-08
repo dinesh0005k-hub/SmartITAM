@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" audit="true" db_object_id="bcb5d3a5c3409310181c1612b40131d9" extends="task" label="Hardware Request" max_length="40" name="x_2240997_smarti_0_hardware_request" type="collection">
+        <element label="Device Type" max_length="40" name="device_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Monitor" sequence="1" value="monitor"/>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="laptop"/>
+                <element inactive_on_update="false" label="Smartphone" sequence="2" value="smartphone"/>
+            </choice>
+        </element>
+        <element label="Device Condition" max_length="40" name="device_condition" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Brand New" sequence="0" value="brand_new"/>
+                <element inactive_on_update="false" label="Refurbished" sequence="1" value="refurbished"/>
+            </choice>
+        </element>
+        <element choice="1" label="Fulfillment Mode" max_length="40" name="fylfillment_mode" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Refurbished Allocation" sequence="0" value="refurbished_allocation"/>
+                <element inactive_on_update="false" label="Procurement Order" sequence="1" value="procurement_order"/>
+            </choice>
+        </element>
+        <element label="Linked Asset" max_length="32" name="linked_asset" reference="x_2240997_smarti_0_it_asset" type="reference"/>
+        <element label="Requested For" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+    </element>
+</database>

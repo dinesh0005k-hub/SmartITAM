@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="Incident" source="com.snc.incident">ace4b23b8c5503100a22deb6dd2b4ed0</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 17:12:53</sys_created_on>
+        <sys_id>9d6bd3a1c3809310181c1612b40131a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 17:12:53</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

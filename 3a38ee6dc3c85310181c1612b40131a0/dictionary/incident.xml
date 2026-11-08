@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" db_object_id="b0e4363b8c5503100a22deb6dd2b4e97" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+        <element label="Impacted Asset" max_length="32" name="x_2240997_smarti_0_impacted_asset" reference="x_2240997_smarti_0_it_asset" type="reference"/>
+    </element>
+</database>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  /* widget controller */
+  var c = this;
+};]]></client_script>
+        <controller_as/>
+        <css>.itam-portal-wrapper {&#13;
+  padding: 40px 15px 60px;&#13;
+  background-color: #f8fafc;&#13;
+  font-family: inherit;&#13;
+}&#13;
+&#13;
+.hero-section {&#13;
+  max-width: 750px;&#13;
+  margin: 0 auto 36px;&#13;
+}&#13;
+&#13;
+.badge-pill {&#13;
+  display: inline-block;&#13;
+  padding: 5px 14px;&#13;
+  font-size: 11px;&#13;
+  font-weight: 700;&#13;
+  letter-spacing: 1px;&#13;
+  color: #0d9488;&#13;
+  background-color: #ccfbf1;&#13;
+  border-radius: 20px;&#13;
+  text-transform: uppercase;&#13;
+  margin-bottom: 16px;&#13;
+}&#13;
+&#13;
+.hero-icon {&#13;
+  color: #334155;&#13;
+  margin-bottom: 12px;&#13;
+}&#13;
+&#13;
+.hero-title {&#13;
+  font-size: 34px;&#13;
+  font-weight: 700;&#13;
+  color: #0f172a;&#13;
+  margin-bottom: 10px;&#13;
+}&#13;
+&#13;
+.hero-subtitle {&#13;
+  font-size: 15px;&#13;
+  color: #64748b;&#13;
+  line-height: 1.6;&#13;
+}&#13;
+&#13;
+.cards-container {&#13;
+  max-width: 1180px;&#13;
+}&#13;
+&#13;
+.card-col {&#13;
+  margin-bottom: 24px;&#13;
+}&#13;
+&#13;
+.action-card {&#13;
+  background: #ffffff;&#13;
+  border: 1px solid #e2e8f0;&#13;
+  border-radius: 12px;&#13;
+  padding: 24px 20px;&#13;
+  text-align: center;&#13;
+  height: 100%;&#13;
+  display: flex;&#13;
+  flex-direction: column;&#13;
+  justify-content: space-between;&#13;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);&#13;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;&#13;
+  position: relative;&#13;
+}&#13;
+&#13;
+.action-card:hover {&#13;
+  transform: translateY(-4px);&#13;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);&#13;
+}&#13;
+&#13;
+.live-pill {&#13;
+  display: inline-block;&#13;
+  font-size: 11px;&#13;
+  font-weight: 600;&#13;
+  padding: 3px 10px;&#13;
+  border-radius: 12px;&#13;
+  margin-bottom: 12px;&#13;
+}&#13;
+&#13;
+.pill-green {&#13;
+  background-color: #dcfce7;&#13;
+  color: #15803d;&#13;
+}&#13;
+&#13;
+.pill-amber {&#13;
+  background-color: #fef3c7;&#13;
+  color: #b45309;&#13;
+}&#13;
+&#13;
+.pill-blue {&#13;
+  background-color: #e0f2fe;&#13;
+  color: #0369a1;&#13;
+}&#13;
+&#13;
+.pill-purple {&#13;
+  background-color: #f3e8ff;&#13;
+  color: #7e22ce;&#13;
+}&#13;
+&#13;
+.card-icon {&#13;
+  color: #0d9488;&#13;
+  margin-bottom: 14px;&#13;
+}&#13;
+&#13;
+.card-title {&#13;
+  font-size: 18px;&#13;
+  font-weight: 600;&#13;
+  color: #1e293b;&#13;
+  margin-bottom: 8px;&#13;
+}&#13;
+&#13;
+.card-desc {&#13;
+  font-size: 13px;&#13;
+  color: #64748b;&#13;
+  line-height: 1.5;&#13;
+  margin-bottom: 20px;&#13;
+}&#13;
+&#13;
+.btn-action {&#13;
+  border-radius: 24px;&#13;
+  padding: 8px 20px;&#13;
+  font-size: 13px;&#13;
+  font-weight: 600;&#13;
+  text-decoration: none;&#13;
+  transition: all 0.2s ease;&#13;
+  display: inline-block;&#13;
+}&#13;
+&#13;
+.btn-dark {&#13;
+  background-color: #0f172a;&#13;
+  color: #ffffff;&#13;
+  border: 1px solid #0f172a;&#13;
+}&#13;
+&#13;
+.btn-dark:hover {&#13;
+  background-color: #1e293b;&#13;
+  color: #ffffff;&#13;
+}&#13;
+&#13;
+.btn-teal {&#13;
+  background-color: #0d9488;&#13;
+  color: #ffffff;&#13;
+  border: 1px solid #0d9488;&#13;
+}&#13;
+&#13;
+.btn-teal:hover {&#13;
+  background-color: #0f766e;&#13;
+  color: #ffffff;&#13;
+}&#13;
+&#13;
+.btn-outline {&#13;
+  background-color: #ffffff;&#13;
+  color: #334155;&#13;
+  border: 1px solid #cbd5e1;&#13;
+}&#13;
+&#13;
+.btn-outline:hover {&#13;
+  background-color: #f1f5f9;&#13;
+  color: #0f172a;&#13;
+}&#13;
+/* Amber badge for pending manager approvals */&#13;
+.pill-amber {&#13;
+  background-color: #fef3c7;&#13;
+  color: #d97706;&#13;
+  border: 1px solid #fde68a;&#13;
+  font-weight: 600;&#13;
+}&#13;
+&#13;
+.btn-amber {&#13;
+  background-color: #d97706;&#13;
+  color: #ffffff;&#13;
+  border: none;&#13;
+}&#13;
+&#13;
+.btn-amber:hover {&#13;
+  background-color: #b45309;&#13;
+  color: #ffffff;&#13;
+}&#13;
+/* Display 5 cards evenly across a single row on desktop */&#13;
+@media (min-width: 992px) {&#13;
+  .card-col {&#13;
+    width: 20% !important;&#13;
+  }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>Dashboard landing cards displaying dynamic asset counts and quick action links for SmartITAM</description>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>smartitam_dashboard_cards</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>smartITAM Dashboard cards</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+    var userId = gs.getUserID();
+
+    // 1. Query active physical assets assigned to the logged-in user
+    data.assetCount = 0;
+    data.latestAssetTag = '';
+    var grAsset = new GlideRecord('x_2240997_smarti_0_it_asset');
+    grAsset.addQuery('assigned_to', userId);
+    grAsset.addQuery('status', '!=', 'retired');
+    grAsset.orderByDesc('sys_created_on');
+    grAsset.query();
+    data.assetCount = grAsset.getRowCount();
+    if (grAsset.next()) {
+        data.latestAssetTag = grAsset.getDisplayValue('asset_tag') || 'Assigned';
+    }
+
+    // 2. Query hardware requests submitted for the logged-in user
+    data.openRequests = 0;
+    data.completedRequests = 0;
+    var grReq = new GlideRecord('x_2240997_smarti_0_hardware_request');
+    grReq.addQuery('requested_for', userId);
+    grReq.query();
+    while (grReq.next()) {
+        var state = grReq.getValue('state');
+        if (state == '3' || state == 'Closed Complete') {
+            data.completedRequests++;
+        } else {
+            data.openRequests++;
+        }
+    }
+// Query pending approvals for the currently logged-in user
+var grApp = new GlideRecord('sysapproval_approver');
+grApp.addQuery('approver', gs.getUserID());
+grApp.addQuery('state', 'requested');
+grApp.query();
+data.approvalCount = grApp.getRowCount();	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-22 14:35:14</sys_created_on>
+        <sys_id>d52a0916c38c9710181c1612b40131c6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>smartITAM Dashboard cards</sys_name>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+        <sys_update_name>sp_widget_d52a0916c38c9710181c1612b40131c6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-25 16:15:58</sys_updated_on>
+        <template><![CDATA[<div class="itam-portal-wrapper">
+  <!-- Hero Section -->
+  <div class="hero-section text-center">
+    <div class="badge-pill">IT ASSET MANAGEMENT PORTAL</div>
+    <div class="hero-icon">
+      <i class="fa fa-laptop fa-3x"></i>
+    </div>
+    <h1 class="hero-title">Welcome to SmartITAM</h1>
+    <p class="hero-subtitle">
+      Centralized self-service portal to request hardware devices, report hardware issues, and track your asset lifecycles in real time.
+    </p>
+  </div>
+
+  <!-- 4-Card Quick Actions Grid -->
+  <div class="container cards-container">
+    <div class="row">
+      
+      <!-- Card 1: Request Device -->
+      <div class="col-xs-12 col-sm-6 col-md-3 card-col">
+        <div class="action-card">
+          <div class="card-top">
+            <span class="live-pill pill-green">Stock Verified</span>
+            <div class="card-icon">
+              <i class="fa fa-desktop fa-2x"></i>
+            </div>
+            <h3 class="card-title">Request Device</h3>
+            <p class="card-desc">Request laptops, monitors, or phones with real-time stock verification.</p>
+          </div>
+          <a href="?id=sc_cat_item&sys_id=ccf11a75c308d310181c1612b4013105" class="btn btn-action btn-dark">
+            Request Now &nbsp;<i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Report Damage / Issue -->
+      <div class="col-xs-12 col-sm-6 col-md-3 card-col">
+        <div class="action-card">
+          <div class="card-top">
+            <span class="live-pill pill-amber">Auto Replacement</span>
+            <div class="card-icon">
+              <i class="fa fa-wrench fa-2x"></i>
+            </div>
+            <h3 class="card-title">Report Issue</h3>
+            <p class="card-desc">Log damaged equipment or broken hardware to trigger auto-replacement.</p>
+          </div>
+          <a href="?id=form&table=incident&sys_id=-1" class="btn btn-action btn-dark">
+            Report Issue &nbsp;<i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Track My Requests -->
+      <div class="col-xs-12 col-sm-6 col-md-3 card-col">
+        <div class="action-card">
+          <div class="card-top">
+            <span class="live-pill pill-blue">{{data.completedRequests}} Completed</span>
+            <div class="card-icon">
+              <i class="fa fa-check-circle-o fa-2x"></i>
+            </div>
+            <h3 class="card-title">My Requests</h3>
+            <p class="card-desc">Track manager approvals and fulfillment status on your submitted tickets.</p>
+          </div>
+          <a href="?id=requests" class="btn btn-action btn-teal">
+            View Status &nbsp;<i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Approvals Card -->
+    <div class="col-xs-12 col-sm-6 col-md-3 card-col">
+      <div class="action-card">
+        <div class="card-top">
+          <span class="live-pill pill-amber" ng-if="data.approvalCount > 0">{{data.approvalCount}} Pending</span>
+          <span class="live-pill pill-teal" ng-if="data.approvalCount == 0">0 Pending</span>
+          <div class="card-icon">
+            <i class="fa fa-check-square-o fa-2x"></i>
+          </div>
+        </div>
+        <h3>My Approvals</h3>
+        <p>Review and action pending hardware allocation requests awaiting your sign-off.</p>
+        <div>
+          <a href="/sp?id=approvals" class="btn btn-action btn-teal">
+            Review Approvals &nbsp;<i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+      <!-- Card 4: My Assigned Assets -->
+      <div class="col-xs-12 col-sm-6 col-md-3 card-col">
+        <div class="action-card">
+          <div class="card-top">
+            <span class="live-pill pill-purple" ng-if="data.assetCount > 0">{{data.assetCount}} Active ({{data.latestAssetTag}})</span>
+            <span class="live-pill pill-purple" ng-if="data.assetCount == 0">0 Assigned</span>
+            <div class="card-icon">
+              <i class="fa fa-user-circle fa-2x"></i>
+            </div>
+            <h3 class="card-title">My Assets</h3>
+            <p class="card-desc">View serial numbers, condition, and details of hardware assigned to you.</p>
+          </div>
+          <a href="?id=list&table=x_2240997_smarti_0_it_asset&filter=assigned_to=javascript:gs.getUserID()" class="btn btn-action btn-outline">
+            View Assets &nbsp;<i class="fa fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>]]></template>
+    </sp_widget>
+</record_update>

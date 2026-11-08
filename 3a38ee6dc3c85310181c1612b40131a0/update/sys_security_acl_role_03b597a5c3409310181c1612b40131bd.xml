@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-20 16:48:10</sys_created_on>
+        <sys_id>03b597a5c3409310181c1612b40131bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_2240997_smarti_0_hardware_request.x_2240997_smarti_0.admin</sys_name>
+        <sys_package display_value="SmartITAM" source="x_2240997_smarti_0">3a38ee6dc3c85310181c1612b40131a0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="SmartITAM">3a38ee6dc3c85310181c1612b40131a0</sys_scope>
+        <sys_security_acl display_value="x_2240997_smarti_0_hardware_request">8fb597a5c3409310181c1612b4013175</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_03b597a5c3409310181c1612b40131bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-20 16:48:10</sys_updated_on>
+        <sys_user_role display_value="x_2240997_smarti_0.admin" name="x_2240997_smarti_0.admin">b638ee6dc3c85310181c1612b40131bf</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
