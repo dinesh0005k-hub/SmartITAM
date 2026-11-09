@@ -19,7 +19,6 @@
       ▼
 [ Flow Designer: Hardware Request Handler ]
       │ ──► Allocates Asset & Updates State to 'In Use'
-      │ ──► Dispatches User Notification
       ▼
 [ Asset Lifecycle Tracking ]
       │ (Active usage, automated state synchronization)
